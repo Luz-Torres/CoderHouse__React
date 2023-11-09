@@ -1,14 +1,14 @@
+import { Link, NavLink } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.css';
-import { Link, NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     return (
         <header>
             <Link to="/">
-                <img className='logo' src={"./logo.png"} alt="Logo Planeta" />
+                <img className='logo' src={"./public/logo.png"} alt="Logo Planeta" />
             </Link>
-
+    
             <nav>
                 <ul>
                     <li>
@@ -22,7 +22,6 @@ const NavBar = () => {
                     </li>
                 </ul>
             </nav>
-
             <CartWidget />
         </header>
     )

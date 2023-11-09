@@ -1,17 +1,18 @@
 import './ItemDetail.css';
-const ItemDetail = ({ id,nombre,autor,publicacion,editorial,precio,stock,img,descripcion}) => {
+const ItemDetail = ({nombre,precio,autor,editorial,publicacion,stock,img,descripcion}) => {
     return (
-        <div className='contenedorItem'>
-            <h2>Nombre: {nombre} </h2>
-            <h3>Precio: {precio} </h3>
-            <h3>ID: {id} </h3>
-            <h3>Autor: {autor} </h3>
-            <h3>Editorial: {editorial} </h3>
-            <h3>Publicacion: {publicacion} </h3>
-            <p>{stock}</p>
-            <img src={img} alt={nombre} />
-            <p> Descripcion: {descripcion} </p>
-        </div>
+        <article className="contenedorItem">
+            <img className='descripcionImg' src={img} alt={nombre} />
+            <div className='descripcionTexto'>
+                <h2>Nombre: {nombre} </h2>
+                <p>Precio: {precio} </p>
+                <p>Autor: {autor} </p>
+                <p>Editorial: {editorial} </p>
+                <p>Publicacion: {publicacion} </p>
+                <p>Stock: {stock}</p>
+                <p> Descripcion: {descripcion} </p>
+            </div>
+        </article>
     )
 }
 export default ItemDetail;
